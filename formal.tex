@@ -1,0 +1,190 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EME 109 :: Formal style laboratory Report
+% LaTeX Template
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass[12pt,letterpaper]{article}       %controls paper and font size
+\usepackage[letterpaper,margin=1.0in]{geometry} %controls margin spacing
+\usepackage{siunitx}  % Provides the \SI{}{} and \si{} command for typesetting SI units
+\usepackage{graphicx} % Required for the inclusion of images
+\usepackage{amsmath}  % Required for some math elements 
+\usepackage[bookmarksopen=true,bookmarksnumbered=true,bookmarksopenlevel=4]{hyperref}
+\usepackage{fancyhdr}
+\setlength\parindent{0pt} % Removes all indentation from paragraphs (set = 0)
+
+% \renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
+%\usepackage{times} % Uncomment to use the Times New Roman font
+
+%----------------------------------------------------------------------------------------
+%	AUTHOR INFORMATION AND TITLE PAGE SETUP
+%----------------------------------------------------------------------------------------
+\title{EME 109 Formal Report\\ \LaTeX\ Template}	% Fill in Title of Experiment
+\author{Student First and Last Name}				% Fill in Author Name
+\def\labSection{Day and Time}					    % Lab section date and time
+\def\thetaname{TA First and Last Name}				% TA name
+\date{\today}									    % Date
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\theauthor}
+\cfoot{\thepage}
+
+%----------------------------------------------------------------------------------------
+%	BEGINNING OF MAIN BODY OF REPORT 
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+\begin{titlepage}
+
+	\centering
+    \vspace*{0.5 cm}
+    \includegraphics[scale = 1.0]{The_University_of_California_Davis}\\[1.0 cm]	% University Logo
+	\textsc{\Large EME 109}\\[0.5 cm]				    % Course Number
+	\textsc{\large Experimental Methods in\\ Thermodynamics and Fluid Mechanics}\\[0.5 cm]	% Course Name
+	\rule{\linewidth}{0.2 mm} \\[0.4 cm]
+	{ \huge \bfseries \thetitle}\\
+	\rule{\linewidth}{0.2 mm} \\[1.5 cm]
+	
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft} \large
+			\emph{Author:}\\
+			\theauthor
+		\end{flushleft}
+	\end{minipage}~
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushright} \large 
+			\emph{Lab Section:} \\
+			\labSection									
+		\end{flushright}  
+	\end{minipage}~\\[1 cm]
+	\begin{minipage}{0.8\textwidth}
+		\begin{flushleft} \large
+			\emph{TA Name:}\\
+			\thetaname
+		\end{flushleft}
+	\end{minipage}~\\[2 cm]
+
+	{\large \thedate}\\[2 cm]
+ 
+	\vfill
+	
+\end{titlepage}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1 : ABSTRACT
+%----------------------------------------------------------------------------------------
+\begin{abstract}
+	The abstract is a very important part of many types of reports. It provides a brief summary of the contents of the report, and for this class it should be from 100 - 300 words long. The abstract should state what work was done as well as the major conclusions of the investigation. It is very important to write a good abstract, because this is often the only part of a report that someone will read. In addition, readers who are short of time will sometimes use abstracts to select which articles are to be read in more depth and which are to be ignored. It is therefore necessary to convey the contents of an article or report as clearly and succinctly as possible.
+	The abstract should be written on a separate sheet of paper.
+
+	\clearpage
+\end{abstract}
+
+
+%----------------------------------------------------------------------------------------
+%	SECTION 2 : DESCRIPTION OF THE EXPERIMENT
+%----------------------------------------------------------------------------------------
+\section{Description of the Experiment}
+
+In this section, concisely describe the experiment. You should cover aspects such as:
+\begin{enumerate}
+	\item The relevance of the subject of the experiment (e.g., is it used in certain important engineering applications?).
+
+	\item The overall objectives of the experiment.
+
+	\item Provide a description of the experimental apparatus.
+
+	\item Describe the experiments that were performed. Do not include all possible details; just provide general descriptions of the things that were done. For example, with the supersonic nozzle experiment, you might state that you investigated operation of two different nozzles, and varied the inlet and chamber pressures independently.\\ 
+
+	You should provide sufficient details to allow a reader to generally understand what was done during each part of the experiment (though you do not need to provide details on the data obtained).	
+\end{enumerate}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 3 : OBSERVATIONS
+%----------------------------------------------------------------------------------------
+\section{Observations}
+
+In this section describe any observations you made during the experiment that you think are relevant or important. Also provide (brief) interpretations of these observations. For example, did the air mass flow rate become independent of the pressure during the supersonic nozzle experiment? If so, was this expected?
+
+
+%----------------------------------------------------------------------------------------
+%	SECTION 4 : RAW DATA FROM THE EXPERIMENT
+%----------------------------------------------------------------------------------------
+\section{Raw Data From the Experiment}
+
+This section includes the data that you recorded during the actual experiment. These data should be copied from your lab book.
+
+
+%----------------------------------------------------------------------------------------
+%	SECTION 5 : DATA REDUCTION
+%----------------------------------------------------------------------------------------
+\section{Data Reduction}
+
+After each experiment, you will be provided guidance on how to reduce the data. In this section, briefly describe the methods you used for data reduction and also list the reduced data.
+
+
+%----------------------------------------------------------------------------------------
+%	SECTION 6 : ANALYSIS
+%----------------------------------------------------------------------------------------
+\section{Analysis}
+
+After each experiment, you will be asked to analyze the results in various ways. In this section, briefly describe the analyses performed, as well as the results from the analyses.
+
+
+
+%----------------------------------------------------------------------------------------
+%	SECTION 7 : DISCUSSION
+%----------------------------------------------------------------------------------------
+\section{Discussion}
+
+Here, you should provide discussion of any questions that may have been posed in handouts or in the lectures. You should also provide a general discussion of the experiment. For example, were there any anomalous results? If so, then can you explain them? Did the analyses you performed make sense? If not, then why is this? How could the experiment be improved?\\ 
+
+The analyzed results and discussion of those results, including the analysis should be placed here in this section. Results may be reported in a table as shown in Table \ref{table_lable}.  The \LaTeX\ code for generating a table may look intimidating, but a useful resource to generate \LaTeX\ tables from excel can be found at: https://www.tablesgenerator.com.
+\begin{table}[h]
+\centering
+\caption{My caption}
+\label{table_lable}
+\begin{tabular}{c|ccc}
+  & \textbf{Variable 1} & \textbf{Variable 2} & \textbf{Variable 3} \\
+ \hline
+\textbf{Variable 4} & 1 & 2 & 3 \\
+\textbf{Variable 5} & 4 & 5 & 6 \\
+\textbf{Variable 6} & 7 & 8 & 9 \\
+\textbf{Variable 7} & 10 & 11 & 12
+\end{tabular}
+\end{table}
+Additionally, plots or figures that may aid in interpreting experimental data can be inserted as shown in Fig. \ref{placeholderFigure}. Note that figures must be saved as a .jpg, .png, or .eps file type and be in the same directory as the ``memo.tex'' file.  Tables and Figures are inserted in the body of the document in \LaTeX\ as ``floats"; they will be placed automatically in an optimized way to eliminate white space and maximize the placement of text.
+\begin{figure}[h]
+\begin{center}
+	\includegraphics[width=0.65\textwidth]{placeholder} % Include the image placeholder.png
+	\caption{Figure caption.}
+	\label{placeholderFigure}
+\end{center}
+\end{figure}	
+
+
+%----------------------------------------------------------------------------------------
+%	SECTION 8 : CONCLUSION
+%----------------------------------------------------------------------------------------
+\section{Conclusion}
+
+A brief summary of the pertinent results.
+
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
